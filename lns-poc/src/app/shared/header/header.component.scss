@@ -1,0 +1,79 @@
+header{
+    padding: 1em 1em 0.5em 1em;
+    color: white;
+    background-color: #1f487e;
+    /* text-align: left;*/ 
+    height: 55px;
+    width: 99%;
+    justify-content: space-between;
+    // position: fixed;
+    border: none;
+    outline: none; 
+}
+
+#profile-logo {
+    width: 9em;
+    float: left;
+    align-items: center;
+    cursor: pointer;
+}
+
+#notif-icon{
+    width: 7.5em;
+    /* float: right; */
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+#brand-logo-icon{
+    border-radius:100px;
+    width:48px;
+    height:48px;
+    /* position:relative; */
+    left:5px;
+    top:5px;
+    /* float: right; */
+    cursor: pointer;
+    
+}
+
+#profile-text-button{
+    
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 16px;
+    
+}
+
+button{
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+/* #brand-icon-border
+{
+    border-radius:100px;
+    width:184px;
+    height:184px;
+    position:relative;
+    left:5px;
+    top:5px;
+} */
+
+#more-vert-icon {
+    width: 28px;
+    /* float: right; */
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+#menu-at-right {
+    float: right;
+    margin-bottom: 60px;
+    
+    
+}

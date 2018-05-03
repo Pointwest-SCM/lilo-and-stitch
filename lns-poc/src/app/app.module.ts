@@ -14,12 +14,16 @@ import {
   MatMenuModule, MatTabsModule, MatButtonToggleModule, MatAutocompleteModule, MatFormFieldModule, MatExpansionModule,
   MatListModule, MatProgressSpinnerModule, MatStepperModule
 } from '@angular/material';
+import { HeaderComponent } from './shared/header/header.component';
+import { CoverPhotoComponent } from './cover-photo/cover-photo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BrandProfileComponent,
-    BusinessCardComponent
+    BusinessCardComponent,
+    HeaderComponent,
+    CoverPhotoComponent
   ],
   imports: [
     BrowserModule,
