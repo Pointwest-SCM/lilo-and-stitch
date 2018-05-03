@@ -1,1 +1,343 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import "~@angular/material/theming";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,600,600i,900,900i");
+
+// @import "~materialize-css/sass/components/color";
+// @import "~materialize-css/sass/components/variables";
+// @import "~materialize-css/sass/components/normalize";
+// @import "~materialize-css/sass/components/global";
+// @import "~materialize-css/sass/components/toast";
+// @import "~materialize-css/sass/components/typography";
+// @import "~materialize-css/sass/components/buttons";
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: rgba(230, 230, 230, 0.8);
+}
+
+main {
+    color: $konex-blue;
+    padding: 3em 0;
+}
+
+h1, h2, h3, h4 {
+    color: $konex-blue;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+td {
+    text-align: center;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.displayNone {
+    display: none;
+}
+
+.clearBoth {
+    clear: both;
+}
+
+img.imgIcon {
+    width: 1.75em;
+}
+
+/* START - GLOBAL MAT MODAL/DIALOG STYLES */
+[mat-dialog-title] {
+    text-align: center;
+}
+
+mat-dialog-content {
+    h3 {
+        font-size: 1.5em;
+    }
+}
+
+mat-dialog-container.mat-dialog-container {
+    background: white;
+    color: $konex-blue;
+    max-width: 100%;
+    max-height: 90vh;
+}
+
+h2.mat-dialog-title {
+    font-size: 2em;
+}
+
+mat-dialog-actions {
+    float: right;
+}
+
+/* END - GLOBAL MODAL/DIALOG STYLES */
+
+/* START - GLOBAL FORM STYLES */
+legend {
+    color: $konex-blue;
+}
+
+.mat-form-field-suffix {
+    align-self: flex-end;
+}
+
+mat-form-field.lowerInputIcon {
+    .mat-form-field-flex {
+        align-items: flex-end;
+    }
+}
+
+mat-form-field.largeTextArea {
+    textarea.mat-input-element {
+        height: 12em;
+    }
+}
+
+mat-form-field.mediumTextArea {
+    textarea.mat-input-element {
+        height: 5em;
+    }
+}
+
+mat-form-field.nonFloatingPlaceholder {
+    textarea[matInput] + span {
+        label {
+            padding-left: 0.5em;
+        }
+    }
+
+    textarea[matInput]:focus + span, textarea[matInput].isNotEmpty + span {
+        label {
+            display: none;
+        }
+    }
+
+    .mat-input-wrapper.mat-form-field-wrapper {
+        padding-bottom: 0;
+    }
+
+    .mat-input-infix.mat-form-field-infix {
+        background: white;
+        border-top: none;
+    }
+
+    .mat-input-underline.mat-form-field-underline {
+        position: unset;
+        bottom: unset;
+
+        .mat-input-ripple.mat-form-field-ripple {
+            bottom: 0;
+            top: unset;
+        }
+    }
+}
+
+/* END - GLOBAL FORM STYLES */
+
+/* START - MATERIAL SNACKBAR/TOAST STYLES */
+button.mat-simple-snackbar-action {
+    color: $konex-gold;
+}
+
+snack-bar-container.mat-snack-bar-container.mat-snack-bar-center {
+    background: $konex-blue;
+    font-size: 18px;
+}
+
+/* END - MATERIAL SNACKBAR/TOAST STYLES */
+
+/* START - MATERIAL TABS STYLES */
+
+.mat-tab-label {
+    flex-grow: 1;
+}
+
+#tradeStatisticsSummaryWrapper {
+    mat-tab-header.mat-tab-header .mat-tab-label {
+        min-width: 0;
+        padding: 0;
+        width: 33.33%;
+    }
+}
+
+#searchInputWrapper {
+    mat-tab-header.mat-tab-header .mat-tab-label {
+        height: 4.61em;
+    }
+}
+
+mat-tab-group.hideScrollOnChangeTab {
+    mat-tab-body {
+        .mat-tab-body-content {
+            overflow: hidden;
+        }
+    }
+}
+
+/* END - MATERIAL TABS STYLES */
+
+/* START - MATERIAL BUTTON STYLES */
+
+button.mat-raised-button.smallBtn {
+    min-width: 0;
+    font-size: 0.75em;
+    width: 5em;
+    padding: 0;
+    border-radius: 0.5em;
+    font-weight: 600;
+    line-height: 2em;
+}
+
+button.mat-button.smallBtn {
+    min-width: 0;
+    font-size: 0.75em;
+    width: 5em;
+    padding: 0;
+    font-weight: 600;
+    line-height: 2em;
+}
+
+button.mat-raised-button.mediumBtn {
+    line-height: 25px;
+}
+
+button.flatFabButton[mat-mini-fab], a.flatFabButton[mat-mini-fab] {
+    box-shadow: none;
+}
+
+button[mat-icon-button]:not([matSuffix]) {
+    img.imgIcon {
+        width: 2em;
+    }
+}
+
+button[mat-icon-button][matSuffix] {
+    img.imgIcon {
+        width: 1.25em;
+    }
+}
+
+/* END - MATERIAL BUTTON STYLES */
+
+/* START - MATERIAL MENU STYLES */
+
+button[mat-menu-item], a[mat-menu-item] {
+    display: flex;
+    align-items: center;
+
+    img.imgIcon {
+        width: 1.5em;
+        margin-right: 1em;
+    }
+}
+
+[mat-menu-item].mat-menu-item {
+    color: $konex-blue;
+}
+
+.notifMatMenu.mat-menu-panel {
+    max-width: 28em;
+    max-height: 75vh;
+}
+
+/* END - MATERIAL MENU STYLES */
+
+/* START - MATERIAL SELECT STYLES */
+
+.mat-select-panel {
+    max-width: 45em;
+}
+
+/* END - MATERIAL SELECT STYLES */
+
+/* START - MATERIAL CARD STYLES */
+
+mat-card.mat-card {
+    border-radius: 10px;
+}
+
+mat-card-content {
+    color: $konex-blue;
+}
+
+/* END - MATERIAL CARD STYLES */
+
+/* START - TRADE STAT MAP STYLES */
+
+.map {
+    background-color: #e6e6e6;
+    position: relative;
+
+    svg {
+        max-width: 100%;
+    }
+}
+
+.mapTooltip {
+    position: absolute;
+    background-color: #fff;
+    opacity: 0.80;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1000;
+    max-width: 300px;
+    display: none;
+    color: #232323;
+}
+
+.mapael {
+    .plot {
+        fill: #FDD72D;
+    }
+
+    .zoomButton {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        color: #000;
+        width: 15px;
+        height: 15px;
+        line-height: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+    }
+
+    .zoomReset {
+        top: 10px;
+    }
+
+    .zoomIn {
+        top: 30px;
+    }
+
+    .zoomOut {
+        top: 50px;
+    }
+}
+
+p.mat-line {
+    word-wrap: break-word;
+}
+
+/* END - TRADE STAT MAP STYLES */
