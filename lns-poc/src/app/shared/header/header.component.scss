@@ -1,79 +1,50 @@
-header{
-    padding: 1em 1em 0.5em 1em;
+header {
+    background-color: #112644;
     color: white;
-    background-color: #1f487e;
-    /* text-align: left;*/ 
-    height: 55px;
-    width: 99%;
-    justify-content: space-between;
-    // position: fixed;
-    border: none;
-    outline: none; 
+    display: flex;
+    align-items: center; 
+    height: 45px;
+    margin-bottom: 0.25em;
+    position: relative;
+    width: 100%;     
 }
 
 #profile-logo {
-    width: 9em; 
-    float: left;
-    align-items: center;
-    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    margin-left: 10px;
+
 }
 
-#notif-icon{
-    width: 7.5em;
-    /* float: right; */
-    // margin-bottom: 60px;
-    // cursor: pointer;
+#notif-logo {
+    height: 30px;
+    width: 30px;
+    margin-left: 1080px;
+
 }
 
-#brand-logo-icon{
-    border-radius:100px;
-    width:48px;
-    height:48px;
-    /* position:relative; */
-    left:5px;
-    top:5px;
-    /* float: right; */
-    cursor: pointer;
-    
+#brand-logo-icon {
+    border-radius: 200px;
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
 }
 
-#profile-text-button{
-    
+#profile-text-button {
     background: transparent;
     border: none;
     outline: none;
     color: white;
     font-family: roboto, sans-serif;
-    font-size: 16px;
-    
+    font-size: 15px;
+    margin-left: 10px;
+
 }
 
-button{
-    -webkit-appearance: button;
-    cursor: pointer;
+#vertical-menu {
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+
 }
 
-/* #brand-icon-border
-{
-    border-radius:100px;
-    width:184px;
-    height:184px;
-    position:relative;
-    left:5px;
-    top:5px;
-} */
-
-#more-vert-icon {
-    width: 28px;
-    /* float: right; */
-    align-items: center;
-    cursor: pointer;
-    
-}
-
-#menu-at-right {
-    float: right;
-    margin-bottom: 60px;
-    
-    
-}

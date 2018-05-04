@@ -1,8 +1,8 @@
 <div>
     <mat-card id="profileComponentCard">
         <mat-card-content>
-                <img id="uploadIcon" src="assets/Images/ic_photo_camera_white.png" alt="Upload Icon">
-                <app-cover-photo></app-cover-photo>
+            <img id="uploadIcon" src="assets/Images/ic_photo_camera_white.png" alt="Upload Icon">
+            <app-cover-photo></app-cover-photo>
             <div id="brandLogoWrapper">
                 <div id="brandLogoSubWrapper">
                     <img id="companyBrandLogo" src="" alt="Company Logo">
@@ -86,6 +86,7 @@
                     <h2>Contact Person
                         <input type="image" img id="addContact" src="assets/Images/ic_person_add_white_24dp_2x.png">
                     </h2>
+
                     <div id="contactPersonsWrapper">
                         <div class="contactPersonCardWrapper">
                             <mat-card class="contactPersonCard">
@@ -116,16 +117,6 @@
                                     </div>
 
                                     <div class="contactPersonMenuWrapper">
-                                        <mat-menu>
-                                            <button type="button" mat-menu-item (click)="editContactPerson(contactPerson)">
-                                                <img src="../../assets/Images/ic_mode_edit_blue.png" alt="" class="imgIcon">
-                                                <span>Edit</span>
-                                            </button>
-                                            <button type="button" mat-menu-item (click)="removeContactPerson(contactPerson)">
-                                                <img src="../../assets/Images/ic_delete_forever_blue.png" alt="" class="imgIcon">
-                                                <span>Remove</span>
-                                            </button>
-                                        </mat-menu>
                                         <button mat-icon-button id="editIcon">
                                             <img src="../../assets/Images/edit-blue.png" alt="" class="imgIcon">
                                         </button>
@@ -161,18 +152,7 @@
                                             <span>+63075587714</span>
                                         </div>
                                     </div>
-
                                     <div class="contactPersonMenuWrapper">
-                                        <mat-menu #contactPersonMenu="matMenu" [overlapTrigger]="false">
-                                            <button type="button" mat-menu-item>
-                                                <img src="assets/Images/ic_mode_edit_blue.png" alt="" class="imgIcon">
-                                                <span>Edit</span>
-                                            </button>
-                                            <button type="button" mat-menu-item>
-                                                <img src="assets/Images/ic_phone_black_blue.png" alt="" class="imgIcon">
-                                                <span>Remove</span>
-                                            </button>
-                                        </mat-menu>
                                         <button mat-icon-button id="editIcon">
                                             <img src="assets/Images/edit-blue.png" alt="" class="imgIcon">
                                         </button>
@@ -181,11 +161,8 @@
                             </mat-card>
                         </div>
                     </div>
-
                 </section>
-
             </div>
-
         </mat-card-content>
     </mat-card>
 </div>
