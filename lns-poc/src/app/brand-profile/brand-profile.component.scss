@@ -6,6 +6,18 @@
     padding: 20px;
 }
 
+#uploadIcon{
+    border-radius:100px;
+    background-color: #1f487e;
+    width:48px;
+    height:48px;
+    /* position:relative; */
+    left:5px;
+    top:5px;
+    float: right; 
+    cursor: pointer;
+}
+
 #brandLogoWrapper {
     width: 10em;
     box-sizing: border-box;
@@ -67,7 +79,7 @@ h1 {
 }
 
 #aboutUsSection {
-    padding-top: 30em;
+    padding-top: 3em;
     position: relative;
 }
 
