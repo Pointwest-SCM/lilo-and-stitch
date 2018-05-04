@@ -84,6 +84,7 @@ h1 {
 #companyDescWrapper {
     width: 45em;
     padding-right: 1em;
+    line-height: 20px;
 }
 
 #brandLogoWrapper {
@@ -122,21 +123,26 @@ h1 {
     height: 45px;
     text-align: center;
     transition: 0.2s;
-    margin-left: 20em;
+    margin-left: 28em;
 }
 
 .editProfileButton:hover {
     width: 150px;
     border-radius: 10px;
+    margin-left: 20em;
 }
 
-.editBrandButton {
+.editBrandButtonWrapper {
+    width: 150px;
+    height: 30px;
+}
+
+.editBrandButton    {
     cursor: pointer;
     background-color: #1F487E;
     border: none;
     border-radius: 8px;
-    width: 130px;
-    height: 30px;
+    box-sizing: inherit;
     font-size: 12px;
     font-weight: bold;
     color: #FFFFFF;
@@ -148,6 +154,7 @@ h1 {
 
 .brandDescLabel {
     font-weight: 600;
+    padding-bottom: 3px;
 }
 
 .brandDescInfo, .contactPersonInfo {
@@ -160,6 +167,7 @@ h1 {
             width: 1.25em;
         }
     }
+    padding-bottom: 6px;
 }
 
 .contactPersonCardWrapper {
