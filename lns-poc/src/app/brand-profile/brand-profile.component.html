@@ -4,17 +4,23 @@
 
       <div id="brandLogoWrapper">
         <div id="brandLogoSubWrapper">
-            <img id="companyBrandLogo" src=""
+            <img id="companyBrandLogo" src="../../assets/pointwest_logo.png"
             alt="Company Logo">
+        </div>
+        <div>
+            <button class="editBrandButton hasIcon">
+                <img src="../../assets/ic_photo_camera_white.png" alt="" id="imgIconEditLogo">
+                <span id="editLogoLabel">Edit Brand Logo</span>
+            </button>
         </div>
       </div>
 
       <div id="brandNameWrapper">
-        <h1>COMPANY NAME HERE</h1>
+        <h1>Pointwest Innovations Corporation</h1>
       </div>
 
       <div id="typeAndFollowersWrapper">
-        <span id="companyType">COMPANY TYPE HERE</span>
+        <span id="companyType">Information Technology</span>
         <span id="followerCount">100 Followers</span>
       </div>
 
@@ -37,6 +43,9 @@
                     </div>
                 </div>
                 <div>
+                    <div id="editProfileWrapper">
+                        <button class="editProfileButton" type="button"><img src="../../assets/ic_edit_white.png" alt="Edit Profile"></button> 
+                    </div>
                     <div class="brandDescWrapper">
                         <div class="brandDescLabel">Company Size</div>
                         <div class="brandDescInfo">40 Employees</div>
@@ -50,9 +59,9 @@
                     <div class="brandDescWrapper">
                         <div class="brandDescLabel">Email Address</div>
                         <div class="brandDescInfo hasIcon">
-                            <img src="assets/images/icons/mail-blue.png" alt="" class="imgIcon">
+                            <img src="../../assets/ic_mail_blue.png" alt="" class="imgIcon">
                             <span class="contactInfoText">
-                                <a href="https://www.google.com">COMPANY EMAIL HERE</a>
+                                <a href="https://www.google.com">test@pointwest.com.ph</a>
                             </span>
                         </div>
                     </div>
@@ -61,6 +70,7 @@
                         <div class="brandDescInfo hasIcon">
                             <!-- <img *ngIf="contactInfo.contactNumberTypeId == 1" src="assets/images/icons/phone-blue.png" alt="" class="imgIcon">
                             <img *ngIf="contactInfo.contactNumberTypeId == 2" src="assets/images/icons/mobile-blue.png" alt="" class="imgIcon"> -->
+                            <img src="../../assets/ic_mobile_blue.png" alt="" class="imgIcon">
                             <span class="contactInfoText">+63</span>
                             <span class="contactInfoText">9064478891</span>
                         </div>

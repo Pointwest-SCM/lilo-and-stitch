@@ -67,7 +67,7 @@ h1 {
 }
 
 #aboutUsSection {
-    padding-top: 30em;
+    padding-top: 35em;
     position: relative;
 }
 
@@ -83,6 +83,61 @@ h1 {
 #companyDescWrapper {
     width: 45em;
     padding-right: 1em;
+}
+
+#brandLogoWrapper {
+    max-height: 10em;
+    max-width: 10em;
+}
+
+#brandLogoSubWrapper {
+    background-color:  #FFFFFF;
+    border-radius: 200px;
+    width: 140px;
+    height: 140px;
+    border-color: grey;
+    border: 0.5px;
+    border-style: ridge;
+}
+
+#companyBrandLogo {
+    object-fit: contain;
+    width: 110px;
+    height: 110px;
+    padding-top: 1em;
+}
+
+#editProfileWrapper {
+    padding-bottom: 1em;
+}
+
+.editProfileButton {
+    align-items: center;
+    cursor: pointer;
+    background-color: #1F487E;
+    border: none;
+    border-radius: 200px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    transition: 0.2s;
+    margin-left: 20em;
+}
+
+.editProfileButton:hover {
+    width: 150px;
+}
+
+.editBrandButton {
+    cursor: pointer;
+    background-color: #1F487E;
+    border: none;
+    border-radius: 8px;
+    width: 130px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
 }
 
 .brandDescWrapper {
