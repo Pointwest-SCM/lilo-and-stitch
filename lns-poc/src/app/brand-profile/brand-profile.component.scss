@@ -6,6 +6,18 @@
     padding: 20px;
 }
 
+#uploadIcon{
+    border-radius:100px;
+    background-color: #1f487e;
+    width:48px;
+    height:48px;
+    /* position:relative; */
+    left:5px;
+    top:5px;
+    float: right; 
+    cursor: pointer;
+}
+
 #brandLogoWrapper {
     width: 10em;
     box-sizing: border-box;
@@ -55,6 +67,7 @@ h1 {
     position: absolute;
     top: 27em;
     left: 16em;
+    padding-top: 5px;
 }
 
 #companyType {
@@ -67,7 +80,7 @@ h1 {
 }
 
 #aboutUsSection {
-    padding-top: 30em;
+    padding-top: 8em;
     position: relative;
 }
 
@@ -83,6 +96,68 @@ h1 {
 #companyDescWrapper {
     width: 45em;
     padding-right: 1em;
+    line-height: 20px;
+}
+
+#brandLogoWrapper {
+    max-height: 10em;
+    max-width: 10em;
+}
+
+#brandLogoSubWrapper {
+    background-color:  #FFFFFF;
+    border-radius: 200px;
+    width: 140px;
+    height: 140px;
+    border-color: grey;
+    border: 0.5px;
+    border-style: ridge;
+}
+
+#companyBrandLogo {
+    object-fit: contain;
+    width: 110px;
+    height: 110px;
+    padding-top: 1em;
+}
+
+#editProfileWrapper {
+    padding-bottom: 1em;
+}
+
+.editProfileButton {
+    align-items: center;
+    cursor: pointer;
+    background-color: #1F487E;
+    border: none;
+    border-radius: 100px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    transition: 0.2s;
+    margin-left: 28em;
+}
+
+.editProfileButton:hover {
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 20em;
+}
+
+.editBrandButtonWrapper {
+    width: 150px;
+    height: 30px;
+}
+
+.editBrandButton    {
+    cursor: pointer;
+    background-color: #1F487E;
+    border: none;
+    border-radius: 8px;
+    box-sizing: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
 }
 
 #addContact {
@@ -105,6 +180,7 @@ h1 {
 
 .brandDescLabel {
     font-weight: 600;
+    padding-bottom: 3px;
 }
 
 .brandDescInfo, .contactPersonInfo {
@@ -117,6 +193,7 @@ h1 {
             width: 1.25em;
         }
     }
+    padding-bottom: 6px;
 }
 
 .contactPersonCardWrapper1 {
