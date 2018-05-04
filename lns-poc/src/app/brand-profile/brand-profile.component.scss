@@ -55,6 +55,7 @@ h1 {
     position: absolute;
     top: 27em;
     left: 16em;
+    padding-top: 5px;
 }
 
 #companyType {
@@ -116,7 +117,7 @@ h1 {
     cursor: pointer;
     background-color: #1F487E;
     border: none;
-    border-radius: 200px;
+    border-radius: 100px;
     width: 45px;
     height: 45px;
     text-align: center;
@@ -126,6 +127,7 @@ h1 {
 
 .editProfileButton:hover {
     width: 150px;
+    border-radius: 10px;
 }
 
 .editBrandButton {
