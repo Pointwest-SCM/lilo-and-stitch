@@ -6,7 +6,7 @@ import { BusinessCardComponent } from './business-card/business-card.component';
 const routes: Routes = [
   { path: 'profile', component: BrandProfileComponent,
      children: [
-      {path: 'business-card', component: BusinessCardComponent }
+      { path: 'business-card', component: BusinessCardComponent }
   ] },
   { path: '', redirectTo: '/profile', pathMatch: 'full' },
   { path: '**', redirectTo: '/profile', pathMatch: "full" }
