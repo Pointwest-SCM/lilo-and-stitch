@@ -119,11 +119,20 @@ h1 {
     }
 }
 
-.contactPersonCardWrapper {
+.contactPersonCardWrapper1 {
     padding: 1em;
     width: 50%;
     display: inline-block;
     vertical-align: top;
+    flex: 1
+}
+
+.contactPersonCardWrapper2 {
+    padding: 1em;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    flex: 1
 }
 
 .contactPersonCard {
@@ -131,6 +140,7 @@ h1 {
 
     mat-card-content {
         display: flex;
+        flex-wrap: wrap;
     }
 }
 .contactPersonImgSubWrapper {
