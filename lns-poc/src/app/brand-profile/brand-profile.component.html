@@ -1,201 +1,202 @@
 <div>
-  <mat-card id="profileComponentCard">
-    <mat-card-content>
+    <mat-card id="profileComponentCard">
+        <mat-card-content>
+            <img id="uploadIcon" src="assets/Images/ic_photo_camera_white.png" alt="Upload Icon">
+            <app-cover-photo></app-cover-photo>
+            <div id="brandLogoWrapper">
+                <div id="brandLogoSubWrapper">
+                    <img id="companyBrandLogo" src="../../assets/pointwest_logo.png" alt="Company Logo">
+                </div>
+                <div id="editBrandButtonWrapper">
+                    <button class="editBrandButton">
+                        <span>
+                            <img class="imgIcon" src="../../assets/ic_photo_camera_white.png" alt="">
+                        </span>
+                        <span>Edit Brand Logo</span>
+                    </button>
+                </div>
+            </div>
 
-      <div id="brandLogoWrapper">
-        <div id="brandLogoSubWrapper">
-            <img id="companyBrandLogo" src="../../assets/pointwest_logo.png"
-            alt="Company Logo">
-        </div>
-        <div id="editBrandButtonWrapper">
-            <button class="editBrandButton">
-                <span><img class="imgIcon" src="../../assets/ic_photo_camera_white.png" alt=""></span>
-                <span>Edit Brand Logo</span>
-            </button>
-        </div>
-      </div>
+            <div id="brandNameWrapper">
+                <h1>Pointwest Innovations Corporation</h1>
+            </div>
 
-      <div id="brandNameWrapper">
-        <h1>Pointwest Innovations Corporation</h1>
-      </div>
+            <div id="typeAndFollowersWrapper">
+                <span id="companyType">Information Technology</span>
+                <span id="followerCount">100 Followers</span>
+            </div>
 
-      <div id="typeAndFollowersWrapper">
-        <span id="companyType">Information Technology</span>
-        <span id="followerCount">100 Followers</span>
-      </div>
-
-      <div>
-        <section id="aboutUsSection">
-            <h2>About Us</h2>
-            <div id="aboutUsContentWrapper">
-                <div id="companyDescWrapper">
-                    <div>
+            <div>
+                <section id="aboutUsSection">
+                    <h2>About Us</h2>
+                    <div id="aboutUsContentWrapper">
+                        <div id="companyDescWrapper">
+                            <div>
+                                <div>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, hic ullam dicta repudiandae modi id, accusantium
+                                        voluptates odio labore distinctio dolorem, blanditiis dignissimos quis magnam. Unde
+                                        error aut velit deserunt?Aperiam illo voluptate esse provident, perferendis consequatur
+                                        odit exercitationem suscipit officia. Cupiditate nisi reprehenderit ut fugiat iure.
+                                        Expedita nam quos aut distinctio a? Quis impedit rerum provident, aliquam dolore
+                                        dignissimos?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                         <div>
-                            <p>
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, 
-                              hic ullam dicta repudiandae modi id, accusantium voluptates odio labore distinctio dolorem, 
-                              blanditiis dignissimos quis magnam. Unde error aut velit deserunt?Aperiam illo voluptate esse 
-                              provident, perferendis consequatur odit exercitationem suscipit officia. Cupiditate nisi 
-                              reprehenderit ut fugiat iure. Expedita nam quos aut distinctio a? Quis impedit rerum provident, 
-                              aliquam dolore dignissimos?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div id="editProfileWrapper">
-                        <button class="editProfileButton" type="button"><img src="../../assets/ic_edit_white.png" alt="Edit Profile"></button> 
-                    </div>
-                    <div class="brandDescWrapper">
-                        <div class="brandDescLabel">Company Size</div>
-                        <div class="brandDescInfo">40 Employees</div>
-                    </div>
-                    <div class="brandDescWrapper">
-                        <div class="brandDescLabel">Website</div>
-                        <div class="brandDescInfo">
-                            <a target="_blank" href="http://www.konex.com.ph/#/login">www.konex.com.ph</a>
-                        </div>
-                    </div>
-                    <div class="brandDescWrapper">
-                        <div class="brandDescLabel">Email Address</div>
-                        <div class="brandDescInfo hasIcon">
-                            <img src="../../assets/ic_mail_blue.png" alt="" class="imgIcon">
-                            <span class="contactInfoText">
-                                <a href="https://www.google.com">test@pointwest.com.ph</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="brandDescWrapper">
-                        <div class="brandDescLabel">Contact Number</div>
-                        <div class="brandDescInfo hasIcon">
-                            <!-- <img *ngIf="contactInfo.contactNumberTypeId == 1" src="assets/images/icons/phone-blue.png" alt="" class="imgIcon">
+                            <div id="editProfileWrapper">
+                                <button class="editProfileButton" type="button">
+                                    <img src="../../assets/ic_edit_white.png" alt="Edit Profile">
+                                </button>
+                            </div>
+                            <div class="brandDescWrapper">
+                                <div class="brandDescLabel">Company Size</div>
+                                <div class="brandDescInfo">40 Employees</div>
+                            </div>
+                            <div class="brandDescWrapper">
+                                <div class="brandDescLabel">Website</div>
+                                <div class="brandDescInfo">
+                                    <a target="_blank" href="http://www.konex.com.ph/#/login">www.konex.com.ph</a>
+                                </div>
+                            </div>
+                            <div class="brandDescWrapper">
+                                <div class="brandDescLabel">Email Address</div>
+                                <div class="brandDescInfo hasIcon">
+                                    <img src="../../assets/ic_mail_blue.png" alt="" class="imgIcon">
+                                    <span class="contactInfoText">
+                                        <a href="https://www.google.com">test@pointwest.com.ph</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="brandDescWrapper">
+                                <div class="brandDescLabel">Contact Number</div>
+                                <div class="brandDescInfo hasIcon">
+                                    <!-- <img *ngIf="contactInfo.contactNumberTypeId == 1" src="assets/images/icons/phone-blue.png" alt="" class="imgIcon">
                             <img *ngIf="contactInfo.contactNumberTypeId == 2" src="assets/images/icons/mobile-blue.png" alt="" class="imgIcon"> -->
-                            <img src="../../assets/ic_mobile_blue.png" alt="" class="imgIcon">
-                            <span class="contactInfoText">+63</span>
-                            <span class="contactInfoText">9064478891</span>
+                                    <img src="../../assets/ic_mobile_blue.png" alt="" class="imgIcon">
+                                    <span class="contactInfoText">+63</span>
+                                    <span class="contactInfoText">9064478891</span>
+                                </div>
+                            </div>
+                            <div class="brandDescWrapper">
+                                <div class="brandDescLabel">Headquarters</div>
+                                <div class="brandDescInfo">
+                                    <div>Pointwest Building, UP-Ayalaland Techohub, Don Mariano Alvarez, Diliman,</div>
+                                    <div>
+                                        <span>Quezon City,</span>
+                                    </div>
+                                    <div>
+                                        <span>Philippines,</span>
+                                        <span>1017</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="brandDescWrapper">
-                        <div class="brandDescLabel">Headquarters</div>
-                        <div class="brandDescInfo">
-                            <div>Pointwest Building, UP-Ayalaland Techohub, Don Mariano Alvarez, Diliman,</div>
-                            <div>
-                                <span>Quezon City,</span>
-                            </div>
-                            <div>
-                                <span>Philippines,</span>
-                                <span>1017</span>
-                            </div>
+                </section>
+
+                <section id="contactPersonSection">
+                    <h2>Contact Person
+                        <input type="image" img id="addContact" src="assets/Images/ic_person_add_white_24dp_2x.png">
+                    </h2>
+                    <div id="contactPersonsWrapper">
+                        <div class="contactPersonCardWrapper">
+                            <mat-card class="contactPersonCard">
+                                <mat-card-content>
+                                    <div class="contactPersonImgWrapper">
+                                        <div class="contactPersonImgSubWrapper">
+                                            <img src="../../assets/Images/buitre.JPG" alt="" class="contactPersonImgPlaceholder">
+                                        </div>
+                                    </div>
+                                    <div class="contactPersonDetails">
+                                        <div class="contactPersonInfo contactPersonName">Lemuel Buitre</div>
+                                        <div class="contactPersonInfo">
+                                            <span>Director,</span>
+                                            <span>Information Technology</span>
+                                        </div>
+                                        <div class="contactPersonInfo hasIcon">
+                                            <img src="../../assets/Images/ic_mail_black_blue.png" alt="" class="imgIcon">
+                                            <a href="www.google.com">lemuelbuitre@email.com</a>
+                                        </div>
+                                        <div class="contactPersonInfo hasIcon">
+                                            <img src="../../assets/Images/ic_phone_black_blue.png" alt="" class="imgIcon">
+                                            <span>(02) 5648891</span>
+                                        </div>
+                                        <div class="contactPersonInfo hasIcon">
+                                            <img src="../../assets/Images/ic_stay_current_portrait_blue.png" alt="" class="imgIcon">
+                                            <span>+639520014527</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="contactPersonMenuWrapper">
+                                        <mat-menu>
+                                            <button type="button" mat-menu-item (click)="editContactPerson(contactPerson)">
+                                                <img src="../../assets/Images/ic_mode_edit_blue.png" alt="" class="imgIcon">
+                                                <span>Edit</span>
+                                            </button>
+                                            <button type="button" mat-menu-item (click)="removeContactPerson(contactPerson)">
+                                                <img src="../../assets/Images/ic_delete_forever_blue.png" alt="" class="imgIcon">
+                                                <span>Remove</span>
+                                            </button>
+                                        </mat-menu>
+                                        <button mat-icon-button id="editIcon">
+                                            <img src="../../assets/Images/edit-blue.png" alt="" class="imgIcon">
+                                        </button>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+
+                        <div class="contactPersonCardWrapper">
+                            <mat-card class="contactPersonCard">
+                                <mat-card-content>
+                                    <div class="contactPersonImgWrapper">
+                                        <div class="contactPersonImgSubWrapper">
+                                            <img src="../../assets/Images/Mallillin.jpg" alt="" class="contactPersonImgPlaceholder">
+                                        </div>
+                                    </div>
+                                    <div class="contactPersonDetails">
+                                        <div class="contactPersonInfo contactPersonName">Aldrin Mallillin</div>
+                                        <div class="contactPersonInfo">
+                                            <span>Director,</span>
+                                            <span> Infrastructure</span>
+                                        </div>
+                                        <div class="contactPersonInfo hasIcon">
+                                            <img src="assets/Images/ic_mail_black_blue.png" alt="" class="imgIcon">
+                                            <a href="www.google.com">aldrinmallillin@email.com</a>
+                                        </div>
+                                        <div class="contactPersonInfo hasIcon">
+                                            <img src="assets/Images/ic_phone_black_blue.png" alt="" class="imgIcon">
+                                            <span>(02) 8998547</span>
+                                        </div>
+                                        <div class="contactPersonInfo hasIcon">
+                                            <img src="assets/Images/ic_stay_current_portrait_blue.png" alt="" class="imgIcon">
+                                            <span>+63075587714</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="contactPersonMenuWrapper">
+                                        <mat-menu #contactPersonMenu="matMenu" [overlapTrigger]="false">
+                                            <button type="button" mat-menu-item>
+                                                <img src="assets/Images/ic_mode_edit_blue.png" alt="" class="imgIcon">
+                                                <span>Edit</span>
+                                            </button>
+                                            <button type="button" mat-menu-item>
+                                                <img src="assets/Images/ic_phone_black_blue.png" alt="" class="imgIcon">
+                                                <span>Remove</span>
+                                            </button>
+                                        </mat-menu>
+                                        <button mat-icon-button id="editIcon">
+                                            <img src="assets/Images/edit-blue.png" alt="" class="imgIcon">
+                                        </button>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
-
-        <section id="contactPersonSection">
-            <h2>Contact Person</h2>
-
-            <div id="contactPersonsWrapper">
-                <div class="contactPersonCardWrapper">
-                    <mat-card class="contactPersonCard">
-                        <mat-card-content>
-                            <div class="contactPersonImgWrapper">
-                                <div class="contactPersonImgSubWrapper">
-                                    <img src="" alt=""
-                                        class="contactPersonImgPlaceholder">
-                                </div>
-                            </div>
-                            <div class="contactPersonDetails">
-                                <div class="contactPersonInfo contactPersonName">Lemuel Buitre</div>
-                                <div class="contactPersonInfo">
-                                    <span>Director,</span>
-                                    <span *ngIf="contactPerson.department"> Information Technology</span>
-                                </div>
-                                <div class="contactPersonInfo hasIcon">
-                                    <img src="" alt="" class="imgIcon">
-                                    <a href="www.google.com">lemuelbuitre@email.om</a>
-                                </div>
-                                <div class="contactPersonInfo hasIcon">
-                                    <img src="" alt="" class="imgIcon">
-                                    <span>(02) 5648891</span>
-                                </div>
-                                <div class="contactPersonInfo hasIcon">
-                                    <img src="" alt="" class="imgIcon">
-                                    <span>+639520014527</span>
-                                </div>
-                            </div>
-
-                            <div class="contactPersonMenuWrapper">
-                                <mat-menu>
-                                    <button type="button" mat-menu-item (click)="editContactPerson(contactPerson)">
-                                        <img src="assets/images/icons/edit-blue.png" alt="" class="imgIcon">
-                                        <span>Edit</span>
-                                    </button>
-                                    <button type="button" mat-menu-item (click)="removeContactPerson(contactPerson)">
-                                        <img src="assets/images/icons/delete-blue.png" alt="" class="imgIcon">
-                                        <span>Remove</span>
-                                    </button>
-                                </mat-menu>
-                                <button mat-icon-button>
-                                    <img src="" alt="" class="imgIcon">
-                                </button>
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-
-                <div class="contactPersonCardWrapper">
-                    <mat-card class="contactPersonCard">
-                        <mat-card-content>
-                            <div class="contactPersonImgWrapper">
-                                <div class="contactPersonImgSubWrapper">
-                                    <img src="" alt=""
-                                        class="contactPersonImgPlaceholder">
-                                </div>
-                            </div>
-                            <div class="contactPersonDetails">
-                                <div class="contactPersonInfo contactPersonName">Aldrin Mallillin</div>
-                                <div class="contactPersonInfo">
-                                    <span>Director,</span>
-                                    <span *ngIf="contactPerson.department"> Infrastructure</span>
-                                </div>
-                                <div class="contactPersonInfo hasIcon">
-                                    <img src="" alt="" class="imgIcon">
-                                    <a href="www.google.com">aldrinmallillin@email.com</a>
-                                </div>
-                                <div class="contactPersonInfo hasIcon">
-                                    <img src="" alt="" class="imgIcon">
-                                    <span>(02) 8998547</span>
-                                </div>
-                                <div class="contactPersonInfo hasIcon">
-                                    <img src="" alt="" class="imgIcon">
-                                    <span>+63075587714</span>
-                                </div>
-                            </div>
-
-                            <div class="contactPersonMenuWrapper">
-                                <mat-menu #contactPersonMenu="matMenu" [overlapTrigger]="false">
-                                    <button type="button" mat-menu-item >
-                                        <img src="" alt="" class="imgIcon">
-                                        <span>Edit</span>
-                                    </button>
-                                    <button type="button" mat-menu-item>
-                                        <img src="" alt="" class="imgIcon">
-                                        <span>Remove</span>
-                                    </button>
-                                </mat-menu>
-                                <button mat-icon-button>
-                                    <img src="" alt="" class="imgIcon">
-                                </button>
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-            </div>
-        </section>
-
-      </div>
-
-    </mat-card-content>
-  </mat-card>
+        </mat-card-content>
+    </mat-card>
 </div>
