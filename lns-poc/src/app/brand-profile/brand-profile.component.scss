@@ -85,6 +85,20 @@ h1 {
     padding-right: 1em;
 }
 
+#addContact {
+    Float: right;
+    margin-right: 20px;
+    border-radius: 100px;
+    background: #091F5F;
+    width: 40px;
+    height: 40px;
+}
+#editIcon {
+    background-color: white;
+    border: white;
+
+}
+
 .brandDescWrapper {
     padding-bottom: 1em;
 }
@@ -119,7 +133,6 @@ h1 {
         display: flex;
     }
 }
-
 .contactPersonImgSubWrapper {
     border-radius: 50%;
     overflow: hidden;
