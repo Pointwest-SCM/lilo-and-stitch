@@ -16,16 +16,16 @@
     top:5px;
     float: left; 
     cursor: pointer;
-    z-index: 10;
 }
 
 .uploadCoverButton{
     float: right;
-    border-radius:100px;
+    border-radius:150px;
     background-color: #1f487e;
     font-size: 0px;
-    border-color: #1f487e;
-
+    align-items: center;
+    cursor: pointer;
+    border: none;
 }
 
 .uploadCoverButton:hover{
@@ -35,10 +35,20 @@
     // float: right;
     font-size: 15px;
     color: white;
-    text-align: center;
+    align-items: center;
     //position: absolute;
-    z-index: 10;
 }
+
+#coverPhoto{
+    position: absolute;
+}
+
+#coverPhotoButton{
+    position: relative;
+    z-index: 1;     
+
+}
+
 
 #brandLogoWrapper {
     width: 10em;
@@ -111,7 +121,7 @@ a:link{
 }
 
 #aboutUsSection {
-    padding-top: 120px;
+    padding-top: 500px;
     position: relative;
 }
 
