@@ -1,7 +1,7 @@
 <div>
     <mat-card id="profileComponentCard">
         <mat-card-content>
-            <img id="uploadIcon" src="assets/Images/ic_photo_camera_white.png" alt="Upload Icon">
+            <img id="uploadCoverPhotoIcon" src="assets/Images/ic_photo_camera_white.png" alt="Upload Icon">
             <app-cover-photo></app-cover-photo>
             <div id="brandLogoWrapper">
                 <div id="brandLogoSubWrapper">
@@ -9,10 +9,10 @@
                 </div>
                 <div id="editBrandButtonWrapper">
                     <button class="editBrandButton">
-                        <span>
-                            <img class="imgIcon" src="../../assets/ic_photo_camera_white.png" alt="">
-                        </span>
-                        <span>Edit Brand Logo</span>
+                        <div class="editBrandButtonLabel hasIcon">
+                            <img src="../../assets/ic_photo_camera_white.png" alt="" class="imgIcon">
+                            <span class="editBrandButtonText">Edit Brand Logo</span>
+                        </div>
                     </button>
                 </div>
             </div>
@@ -28,28 +28,38 @@
 
             <div>
                 <section id="aboutUsSection">
-                    <h2>About Us</h2>
+                    <h2>About Us
+                        <button class="editProfileButton" type="button">
+                            <div class="editProfileButtonLabel">
+                                <img src="../../assets/ic_edit_white.png" alt="Edit Profile">
+                                <span class="editProfileButtonText">Edit Profile</span>
+                            </div>
+                        </button>
+                    </h2>
                     <div id="aboutUsContentWrapper">
                         <div id="companyDescWrapper">
                             <div>
                                 <div>
                                     <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, hic ullam dicta repudiandae modi id, accusantium
-                                        voluptates odio labore distinctio dolorem, blanditiis dignissimos quis magnam. Unde
-                                        error aut velit deserunt?Aperiam illo voluptate esse provident, perferendis consequatur
-                                        odit exercitationem suscipit officia. Cupiditate nisi reprehenderit ut fugiat iure.
-                                        Expedita nam quos aut distinctio a? Quis impedit rerum provident, aliquam dolore
-                                        dignissimos?
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                        it to make a type specimen book. It has survived not only five centuries, but also
+                                        the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                                        in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                        and more recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                        1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                        specimen book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                                        the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                        with desktop publishing software like Aldus PageMaker including versions of Lorem
+                                        Ipsums.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div id="editProfileWrapper">
-                                <button class="editProfileButton" type="button">
-                                    <img src="../../assets/ic_edit_white.png" alt="Edit Profile">
-                                </button>
-                            </div>
                             <div class="brandDescWrapper">
                                 <div class="brandDescLabel">Company Size</div>
                                 <div class="brandDescInfo">40 Employees</div>
@@ -98,8 +108,11 @@
 
                 <section id="contactPersonSection">
                     <h2>Contact Person
-                        <button class="addContactButton" type="button"> 
-                            <img src="../../assets/Images/ic_person_add_white_24dp_2x.png" alt="Add Contact">
+                        <button class="addContactButton" type="button">
+                            <div class="addContactLabel">
+                                <img src="../../assets/Images/ic_person_add_white_24dp_2x.png" alt="Add Contact">
+                                <span class="buttonTitle">Add Contact</span>
+                            </div>
                         </button>
                     </h2>
                     <div id="contactPersonsWrapper">

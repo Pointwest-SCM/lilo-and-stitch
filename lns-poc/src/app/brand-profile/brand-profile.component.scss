@@ -6,7 +6,7 @@
     padding: 20px;
 }
 
-#uploadIcon{
+#uploadCoverPhotoIcon{
     border-radius:100px;
     background-color: #1f487e;
     width:48px;
@@ -63,6 +63,15 @@ h1 {
     color: #FFFFFF;
 }
 
+h2 {
+    display: inline-flex;
+}
+
+a:link{
+    color: #039be5;
+    text-decoration: none;
+}
+
 #typeAndFollowersWrapper {
     position: absolute;
     top: 27em;
@@ -80,13 +89,14 @@ h1 {
 }
 
 #aboutUsSection {
-    padding-top: 8em;
+    padding-top: 120px;
     position: relative;
 }
 
 #contactPersonSection {
     padding-top: 3em;
     position: relative;
+    
 }
 
 #aboutUsContentWrapper {
@@ -96,7 +106,7 @@ h1 {
 #companyDescWrapper {
     width: 45em;
     padding-right: 1em;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 #brandLogoWrapper {
@@ -125,6 +135,11 @@ h1 {
     padding-bottom: 1em;
 }
 
+.editProfileButtonLabel {
+    display: inline-flex;
+    align-items: center;
+}
+
 .editProfileButton {
     align-items: center;
     cursor: pointer;
@@ -135,18 +150,16 @@ h1 {
     height: 45px;
     text-align: center;
     transition: 0.2s;
-    margin-left: 27em;
+    margin-left: 835px;
+    color: #FFFFFF;
+    font-size: 0px;
 }
 
 .editProfileButton:hover {
-    width: 150px;
+    width: 130px;
     border-radius: 10px;
-    margin-left: 19em;
-}
-
-.editBrandButtonWrapper {
-    width: 150px;
-    height: 30px;
+    margin-left: 750px;
+    font-size: 15px;
 }
 
 .editBrandButton    {
@@ -160,13 +173,24 @@ h1 {
     color: #FFFFFF;
 }
 
-#addContact {
-    Float: right;
-    margin-right: 20px;
+.editBrandButtonLabel {
+    &.hasIcon {
+        display: flex;
+        align-items: center;
+    }
+    padding: 2px;
+}
+
+.editBrandButtonText {
+    padding: 2px;
+}
+
+#addContactImage {
+    Float: right;    
     border-radius: 100px;
     background: #1F487E;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 #editIcon {
     background-color: white;
@@ -256,26 +280,29 @@ h1 {
     right: 0;
 }
 
-.addContactButton {
+.addContactLabel {
+    display: inline-flex;
     align-items: center;
+}
+
+.addContactButton {
+    // align-items: center;
     cursor: pointer;
     background-color: #1F487E;
     border: none;
     border-radius: 100px;
     width: 45px;
     height: 45px;
-    text-align: center;
+    // text-align: center;
     transition: 0.2s;
-    float: right;
-    margin-right: 1em;
-    position: absolute;
-    left: 70em;
+    margin-left: 755px;
+    color: #FFFFFF;
+    font-size: 0px;
 }
 
 .addContactButton:hover {
-    width: 150px;
+    width: 180px;
     border-radius: 10px;
-    left: 62em;
-    position: absolute;
+    margin-left: 620px;
+    font-size: 15px;
 }
-
