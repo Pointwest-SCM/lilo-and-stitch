@@ -63,6 +63,10 @@ h1 {
     color: #FFFFFF;
 }
 
+h2 {
+    display: inline-flex;
+}
+
 a:link{
     color: #039be5;
     text-decoration: none;
@@ -85,7 +89,7 @@ a:link{
 }
 
 #aboutUsSection {
-    padding-top: 8em;
+    padding-top: 130px;
     position: relative;
 }
 
@@ -130,6 +134,11 @@ a:link{
     padding-bottom: 1em;
 }
 
+.editProfileButtonLabel {
+    display: inline-flex;
+    align-items: center;
+}
+
 .editProfileButton {
     align-items: center;
     cursor: pointer;
@@ -141,17 +150,15 @@ a:link{
     text-align: center;
     transition: 0.2s;
     margin-left: 815px;
+    color: #FFFFFF;
+    font-size: 0px;
 }
 
 .editProfileButton:hover {
-    width: 150px;
+    width: 130px;
     border-radius: 10px;
-    margin-left: 710px;
-}
-
-.editBrandButtonWrapper {
-    width: 140px;
-    height: 25px;
+    margin-left: 720px;
+    font-size: 15px;
 }
 
 .editBrandButton    {
