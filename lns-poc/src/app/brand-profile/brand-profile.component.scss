@@ -63,6 +63,11 @@ h1 {
     color: #FFFFFF;
 }
 
+a:link{
+    color: #039be5;
+    text-decoration: none;
+}
+
 #typeAndFollowersWrapper {
     position: absolute;
     top: 27em;
@@ -96,7 +101,7 @@ h1 {
 #companyDescWrapper {
     width: 45em;
     padding-right: 1em;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 #brandLogoWrapper {
@@ -135,18 +140,18 @@ h1 {
     height: 45px;
     text-align: center;
     transition: 0.2s;
-    margin-left: 27em;
+    margin-left: 815px;
 }
 
 .editProfileButton:hover {
     width: 150px;
     border-radius: 10px;
-    margin-left: 19em;
+    margin-left: 710px;
 }
 
 .editBrandButtonWrapper {
-    width: 150px;
-    height: 30px;
+    width: 140px;
+    height: 25px;
 }
 
 .editBrandButton    {
@@ -154,10 +159,21 @@ h1 {
     background-color: #1F487E;
     border: none;
     border-radius: 8px;
-    box-sizing: inherit;
-    font-size: 12px;
+    font-size: 11.5px;
     font-weight: bold;
     color: #FFFFFF;
+}
+
+.editBrandButtonLabel {
+    &.hasIcon {
+        display: flex;
+        align-items: center;
+    }
+    padding: 2px;
+}
+
+.editBrandButtonText {
+    padding: 2px;
 }
 
 #addContact {
