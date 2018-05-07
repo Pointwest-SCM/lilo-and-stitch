@@ -1,11 +1,13 @@
 #coverPhotos{
     display: flex;
     height: 360px;
+    
 }
 
 .images{
     position: relative;
     overflow: hidden;
+    
 }
 
 #leftImage{
@@ -22,11 +24,13 @@
     height: 50%;
     border: 2px solid #FFF;
     border-left: 1px solid #FFF;
+    
 }
 
 
 img {
     position: absolute;
     width: 100%;
+
 }
 

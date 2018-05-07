@@ -7,28 +7,38 @@
 }
 
 #uploadCoverPhotoIcon{
-    border-radius:100px;
-    background-color: #1f487e;
-    width:48px;
-    height:48px;
+    // border-radius:100px;
+    // background-color: #1f487e;
+    width:30px;
+    height:30px;
     /* position:relative; */
     left:5px;
     top:5px;
-    float: right; 
+    float: left; 
     cursor: pointer;
+    z-index: 10;
 }
 
-// .uploadCoverButton{
-//     float: right;
-//     border-radius:100px;
-//     background-color: #1f487e;
-// }
+.uploadCoverButton{
+    float: right;
+    border-radius:100px;
+    background-color: #1f487e;
+    font-size: 0px;
+    border-color: #1f487e;
 
-// #uploadCoverPhotoButton:hover{
-//     width: 60px;
-//     background-color: #1f487e;
-//     float: right;
-// }
+}
+
+.uploadCoverButton:hover{
+    width:200px;
+    background-color: #1f487e;
+    border-color: #1f487e;
+    // float: right;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    //position: absolute;
+    z-index: 10;
+}
 
 #brandLogoWrapper {
     width: 10em;
