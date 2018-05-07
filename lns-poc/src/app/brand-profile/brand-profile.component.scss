@@ -153,7 +153,7 @@ h1 {
     cursor: pointer;
     background-color: #1F487E;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     box-sizing: inherit;
     font-size: 12px;
     font-weight: bold;
@@ -171,6 +171,7 @@ h1 {
 #editIcon {
     background-color: white;
     border: white;
+    cursor: pointer;
 
 }
 
@@ -254,3 +255,27 @@ h1 {
     top: 0;
     right: 0;
 }
+
+.addContactButton {
+    align-items: center;
+    cursor: pointer;
+    background-color: #1F487E;
+    border: none;
+    border-radius: 100px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    transition: 0.2s;
+    float: right;
+    margin-right: 1em;
+    position: absolute;
+    left: 70em;
+}
+
+.addContactButton:hover {
+    width: 150px;
+    border-radius: 10px;
+    left: 62em;
+    position: absolute;
+}
+
