@@ -1,24 +1,26 @@
 <div>
   <mat-card class="businessCardPageContainer">
     <mat-card-content>
-      <mat-card>
+      <mat-card class="businessCardContainer">
         <mat-card-content class="businessCardWrapper">
-          <div class="logoWrapper">
-            LOGO HERE
+          <div class="logoWrapper" mwlResizable [enableGhostResize]="true" [resizeEdges]="{bottom: true, right: true, top: true, left: true}">
+            <div >
+                <!-- <input type="file" name="myfile" placeholder="Input files here" /> --> LOGO HERE
+            </div>
           </div>
           <div class="detailsWrapper">
             <div id="companyNameWrapper">
-              COMPANY NAME
+              <div ngDraggable><input type="textbox" placeholder="Put company name here"/></div>
             </div>
             <div id="cardHolderNameWrapper">
-              CARD HOLDER NAME
+                <div ngDraggable><input type="textbox" placeholder="Put card holder name here"/></div>
             </div>
             <div id="jobTitleWrapper">
-              JOB TITLE
+                <div ngDraggable><input type="textbox" placeholder="Put job title here"/></div>
             </div>
             <div id="contactDetailsWrapper">
-              <div id="contactNumber">CONTACT NUMBER</div>
-              <div id="emailAddress"><a href="https://www.google.com">COMPANY EMAIL</a></div>
+              <div id="contactNumber">(02) 356-1234</div>
+              <div id="emailAddress"><a href="https://www.google.com">email@email.com</a></div>
             </div>
           </div>
         </mat-card-content>

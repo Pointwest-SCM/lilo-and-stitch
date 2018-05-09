@@ -1,4 +1,24 @@
+.businessCardPageContainer {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    min-height: 41em;
+}
+
 .businessCardWrapper {
     display: flex;
     justify-content: center;
+}
+
+.logoWrapper {
+    border: solid;
+    box-sizing: border-box;
+}
+
+.businessCardContainer {
+    max-width: 50em;
+    min-height: 20em;
+    justify-content: center;
+    margin: auto;
+    padding-top: 2em;
 }

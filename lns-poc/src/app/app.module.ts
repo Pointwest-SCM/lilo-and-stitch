@@ -17,6 +17,9 @@ import {
 import { HeaderComponent } from './shared/header/header.component';
 import { CoverPhotoComponent } from './cover-photo/cover-photo.component';
 
+import { AngularDraggableModule } from 'angular2-draggable';
+import { ResizableModule } from 'angular-resizable-element';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,9 @@ import { CoverPhotoComponent } from './cover-photo/cover-photo.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    AngularDraggableModule,
+    ResizableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

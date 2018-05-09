@@ -96,6 +96,15 @@ a:link{
 #contactPersonSection {
     padding-top: 3em;
     position: relative;
+
+    .contactPersonLabel {
+        h2 {
+            white-space: nowrap;
+            overflow: hidden;
+            // width: 5em;
+        }
+        display: flex;
+    }
 }
 
 #aboutUsContentWrapper {
@@ -277,3 +286,33 @@ a:link{
     top: 0;
     right: 0;
 }
+
+
+/* Add Contact */
+.addContactButtonLabel {
+    display: inline-flex;
+    align-items: center;
+}
+
+.addContactButton {
+    align-items: center;
+    cursor: pointer;
+    background-color: #1F487E;
+    border: none;
+    border-radius: 100px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    transition: 0.2s;
+    margin-left: 750px;
+    color: #FFFFFF;
+    font-size: 0px;
+}
+
+.addContactButton:hover {
+    width: 130px;
+    border-radius: 10px;
+    margin-left: 660px;
+    font-size: 15px;
+}
+

@@ -8,6 +8,7 @@ const routes: Routes = [
      children: [
       { path: 'business-card', component: BusinessCardComponent }
   ] },
+  { path: 'business-card', component: BusinessCardComponent },
   { path: '', redirectTo: '/profile', pathMatch: 'full' },
   { path: '**', redirectTo: '/profile', pathMatch: "full" }
 
