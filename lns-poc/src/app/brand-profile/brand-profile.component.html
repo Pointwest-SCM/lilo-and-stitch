@@ -1,8 +1,17 @@
 <div>
     <mat-card id="profileComponentCard">
+            <div>
+                    <div id="coverPhotoButton">
+                            <button class="uploadCoverButton">
+                                    <img id="uploadCoverPhotoIcon" src="assets/Images/ic_photo_camera_white.png" alt="Upload Icon">
+                                    <span>Upload Cover Photo</span>
+                            </button>
+                    </div>
+                    <div id="coverPhoto">
+                        <app-cover-photo></app-cover-photo>
+                    </div>
+               </div>
         <mat-card-content>
-            <img id="uploadCoverPhotoIcon" src="assets/Images/ic_photo_camera_white.png" alt="Upload Icon">
-            <app-cover-photo></app-cover-photo>
             <div id="brandLogoWrapper">
                 <div id="brandLogoSubWrapper">
                     <img id="companyBrandLogo" src="../../assets/pointwest_logo.png" alt="Company Logo">
@@ -62,7 +71,7 @@
                         <div>
                             <div class="brandDescWrapper">
                                 <div class="brandDescLabel">Company Size</div>
-                                <div class="brandDescInfo">40 Employees</div> 
+                                <div class="brandDescInfo">40 Employees</div>
                             </div>
                             <div class="brandDescWrapper">
                                 <div class="brandDescLabel">Website</div>
@@ -107,7 +116,8 @@
                 </section>
 
                 <section id="contactPersonSection">
-                    <div class="contactPersonLabel">
+                    <!-- Arvin's changes, delete if you want to -->
+                    <!-- <div class="contactPersonLabel">
                         <h2>Contact Person</h2>
                         <button class="addContactButton" type="button">
                             <div class="addContactButtonLabel">
@@ -115,8 +125,16 @@
                                 <span class="addContactButtonText">Add Contact</span>
                             </div>
                         </button>
-                    </div>
+                    </div> -->
 
+                    <h2>Contact Person
+                        <button class="addContactButton" type="button">
+                            <div class="addContactLabel">
+                                <img src="../../assets/Images/ic_person_add_white_24dp_2x.png" alt="Add Contact">
+                                <span class="buttonTitle">Add Contact</span>
+                            </div>
+                        </button>
+                    </h2>
                     <div id="contactPersonsWrapper">
                         <div class="contactPersonCardWrapper2">
                             <mat-card class="contactPersonCard">
