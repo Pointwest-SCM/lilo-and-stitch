@@ -5,7 +5,8 @@ header {
     align-items: center; 
     height: 45px;
     margin-bottom: 0.25em;
-    position: relative;
+    position: fixed;
+    z-index: 900;
     width: 100%;     
 }
 
