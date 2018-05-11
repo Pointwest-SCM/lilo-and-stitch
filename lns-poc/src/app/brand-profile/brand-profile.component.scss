@@ -41,6 +41,7 @@
     color: white;
     align-items: center;
     //position: absolute;
+    
 }
 
 #coverPhoto{
@@ -49,7 +50,7 @@
 
 #coverPhotoButton{
     position: relative;
-    z-index: 1;     
+    z-index: 1;    
 
 }
 
@@ -350,8 +351,8 @@ a:link{
     width: 180px;
     border-radius: 10px;
     margin-left: 620px;
-    margin-top: auto;
-    margin-bottom: auto;
+    // margin-top: auto;
+    // margin-bottom: auto;
     font-size: 15px;
-    text-align: center;
+    //text-align: center;
 }
