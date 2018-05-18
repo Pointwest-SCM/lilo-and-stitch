@@ -1,30 +1,43 @@
 <div>
   <mat-card class="businessCardPageContainer">
     <mat-card-content>
-      <mat-card class="businessCardContainer">
-        <mat-card-content class="businessCardWrapper">
-          <div class="logoWrapper" mwlResizable [enableGhostResize]="true" [resizeEdges]="{bottom: true, right: true, top: true, left: true}">
-            <div >
-                <!-- <input type="file" name="myfile" placeholder="Input files here" /> --> LOGO HERE
+      <mat-card class="businessCardContainer" [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '100% 475px'}">
+        <div class="dragBoundary businessCardWrapper" [ngClass]="{ 'top-b': !edge?.top, 'bottom-b': !edge?.bottom, 'left-b': !edge?.left, 'right-b': !edge?.right }" #myBounds>
+          <div class="logoWrapper" ngDraggable [bounds]="myBounds" [inBounds]="true" mwlResizable [enableGhostResize]="true" [resizeSnapGrid]="{left: 50, right: 50}" [resizeEdges]="{bottom: true, right: true, top: true, left: true}">
+            <div class="upload-btn-wrapper">
+                <!-- <button class="btn">Upload a file</button>
+                <input type="file" name="myfile" /> -->
+                <img [src]="url"  [ngClass]="{'hideButton': !hasUploadedImage}" height="140"> <br/>
+                <button class="btn" [ngClass]="{'hideButton': hasUploadedImage}">Upload a file</button>
+                <input type='file' (change)="onSelectFile($event)"/>
             </div>
           </div>
           <div class="detailsWrapper">
-            <div id="companyNameWrapper">
-              <div ngDraggable><input type="textbox" placeholder="Put company name here"/></div>
+            <div id="companyNameWrapper" class="textContent">
+              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textbox" placeholder="Put company name here"/></div>
             </div>
-            <div id="cardHolderNameWrapper">
-                <div ngDraggable><input type="textbox" placeholder="Put card holder name here"/></div>
+            <div id="cardHolderNameWrapper" class="textContent">
+                <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textbox" placeholder="Put card holder name here"/></div>
             </div>
-            <div id="jobTitleWrapper">
-                <div ngDraggable><input type="textbox" placeholder="Put job title here"/></div>
+            <div id="jobTitleWrapper" class="textContent">
+                <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textbox" placeholder="Put job title here"/></div>
             </div>
-            <div id="contactDetailsWrapper">
+            <div id="contactDetailsWrapper" class="textContent" ngDraggable [bounds]="myBounds" [inBounds]="true">
               <div id="contactNumber">(02) 356-1234</div>
               <div id="emailAddress"><a href="https://www.google.com">email@email.com</a></div>
             </div>
           </div>
-        </mat-card-content>
+          <div class="backgroundButton background-btn-wrapper">
+              <button class="backgroundBtn2" [ngClass]="{'hideButton': hasUploadedBackgroundImage}">Upload a file</button>
+              <input type='file' (change)="onSelectBackground($event)"/>
+          </div>
+        </div>
       </mat-card>
     </mat-card-content>
+    <mat-card-actions>
+      <div class="downloadButtonContainer">
+        <button type="submit" (click)="downloadImage()">Download as IMG</button>
+      </div>
+    </mat-card-actions>
   </mat-card>
 </div>

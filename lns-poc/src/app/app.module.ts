@@ -35,7 +35,7 @@ import { ResizableModule } from 'angular-resizable-element';
     MatCardModule,
     MatMenuModule,
     AngularDraggableModule,
-    ResizableModule
+    ResizableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,14 @@
+input {
+    border: 0px;
+}
+
+input:hover {
+    border: 2px;
+    border-style: dashed;
+}
+
 .businessCardPageContainer {
+    position: relative;
     width: 1000px;
     margin: auto;
     padding: 20px;
@@ -11,14 +21,96 @@
 }
 
 .logoWrapper {
-    border: solid;
+    padding: 1em;
+    height: 12em;
+    width: 12em;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+.logoWrapper:hover {
+    padding: 1em;
+    height: 12em;
+    width: 12em;
+    border: 2px;
+    border-style: dashed;
     box-sizing: border-box;
 }
 
 .businessCardContainer {
     max-width: 50em;
-    min-height: 20em;
+    min-height: 30em;
     justify-content: center;
     margin: auto;
     padding-top: 2em;
+}
+
+.textContent {
+    padding: 0.5em;
+}
+
+.detailsWrapper {
+    padding: 5em;
+}
+
+.dragBoundary {
+    height: 30em;
+    width: 100%;
+}
+
+.downloadButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.backgroundBtn2 {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 10px;
+}
+
+.background-btn-wrapper {
+    position: absolute;
+    right: 1em;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.background-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.hideButton {
+    display: none;
 }
