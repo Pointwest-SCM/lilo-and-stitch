@@ -356,3 +356,30 @@ a:link{
     font-size: 15px;
     //text-align: center;
 }
+
+.businessCardButtonWrapper {
+    position: absolute;
+    right: -57.5em;
+    top: 9.5em;
+}
+
+.businessCardButton {
+    // align-items: center;
+    cursor: pointer;
+    background-color: #1F487E;
+    border: none;
+    border-radius: 10px;
+    width: 180px;
+    height: 40px;
+    // text-align: center;
+    transition: 0.2s;
+    margin-left: 755px;
+    color: #FFFFFF;
+    font-size: 14.5px;
+    z-index: 1;
+}
+
+a {
+    color: white;
+}
+

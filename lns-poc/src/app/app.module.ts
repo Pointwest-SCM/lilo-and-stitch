@@ -20,6 +20,8 @@ import { CoverPhotoComponent } from './cover-photo/cover-photo.component';
 import { AngularDraggableModule } from 'angular2-draggable';
 import { ResizableModule } from 'angular-resizable-element';
 
+import { QuillModule } from 'ngx-quill';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,7 @@ import { ResizableModule } from 'angular-resizable-element';
     MatMenuModule,
     AngularDraggableModule,
     ResizableModule,
+    QuillModule
   ],
   providers: [],
   bootstrap: [AppComponent]

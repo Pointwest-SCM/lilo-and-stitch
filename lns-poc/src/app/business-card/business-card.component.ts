@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
 
@@ -7,7 +7,7 @@ import * as html2canvas from 'html2canvas';
   templateUrl: './business-card.component.html',
   styleUrls: ['./business-card.component.scss']
 })
-export class BusinessCardComponent implements AfterViewInit, OnInit {
+export class BusinessCardComponent implements OnInit {
 
   context: CanvasRenderingContext2D;
 
@@ -24,21 +24,7 @@ export class BusinessCardComponent implements AfterViewInit, OnInit {
 
   constructor() { }
 
-  ngAfterViewInit(): void {
-    // this.context = (this.myCanvas.nativeElement as HTMLCanvasElement).getContext('2d');
-    // this.context = (<HTMLCanvasElement>this.myCanvas.nativeElement).getContext('2d');
-
-    // this.draw();
-  }
-
-  ngOnInit() {
-    // this.cnvs = document.getElementById('cnvs'),
-    // this.ctx = this.cnvs.getContext('2d'),
-    // this.mirror = document.getElementById('mirror');
-
-    // this.cnvs.width = this.mirror.width = window.innerWidth;
-    // this.cnvs.height = this.mirror.height = window.innerHeight;
-  }
+  ngOnInit() {}
 
   onSelectFile(event) { // called each time file input changes
     if (event.target.files && event.target.files[0]) {
@@ -123,7 +109,7 @@ export class BusinessCardComponent implements AfterViewInit, OnInit {
     }
   }
 
-  public downloadPdf() {
+  public downloadAsPdf() {
     // let doc = new jsPDF();
 
     // let specialElementHandlers = {
@@ -143,13 +129,17 @@ export class BusinessCardComponent implements AfterViewInit, OnInit {
     // }); 
 
     // doc.save('test.pdf');
-  }
 
-  private draw() {
-    this.context.beginPath();
-    this.context.moveTo(0,0);
-    this.context.lineTo(300,150);
-    this.context.stroke();
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+      let imgData = canvas.toDataURL('image/png');              
+      let doc = new jsPDF('l', 'mm');
+      let width = doc.internal.pageSize.width;    
+      let height = doc.internal.pageSize.height;
+      doc.addImage(imgData, 'PNG', 25, 25);
+      doc.save('sample-file.pdf');
+    });
+
+
   }
 
 }
