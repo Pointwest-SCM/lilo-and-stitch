@@ -1,8 +1,11 @@
 <div>
   <mat-card class="businessCardPageContainer">
     <mat-card-content>
-      <mat-card class="businessCardContainer" [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '100% 475px'}">
+      <div #content id="content">
+      <mat-card id="capture" class="businessCardContainer" [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '50% 475px'}">
+
         <div class="dragBoundary businessCardWrapper" [ngClass]="{ 'top-b': !edge?.top, 'bottom-b': !edge?.bottom, 'left-b': !edge?.left, 'right-b': !edge?.right }" #myBounds>
+            <!-- <canvas #myCanvas id="canvas" width="700" height="300"></canvas> -->
           <div class="logoWrapper" ngDraggable [bounds]="myBounds" [inBounds]="true" mwlResizable [enableGhostResize]="true" [resizeSnapGrid]="{left: 50, right: 50}" [resizeEdges]="{bottom: true, right: true, top: true, left: true}">
             <div class="upload-btn-wrapper">
                 <!-- <button class="btn">Upload a file</button>
@@ -33,10 +36,17 @@
           </div>
         </div>
       </mat-card>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <div class="downloadButtonContainer">
-        <button type="submit" (click)="downloadImage()">Download as IMG</button>
+        <!-- <a href="#" (click)="downloadImage($event)">
+          <button type="submit">Download as IMG</button>DOWNLOAD
+        </a> -->
+        <!-- <a href="#" (click)="downloadAsImage($event)">
+          <button type="submit">Download as IMG</button>DOWNLOAD AS IMAGE
+        </a> -->
+        <button (click)="downloadAsImage()">to image</button>
       </div>
     </mat-card-actions>
   </mat-card>
