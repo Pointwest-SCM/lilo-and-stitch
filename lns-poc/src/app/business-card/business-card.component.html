@@ -18,7 +18,7 @@
           <div class="detailsWrapper">
             <div id="companyNameWrapper">
               <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textarea" placeholder="Put company name here"/></div> -->
-              <div ngDraggable [bounds]="myBounds" [inBounds]="true" mwlResizable [enableGhostResize]="true" [resizeSnapGrid]="{left: 100, right: 100}" [resizeEdges]="{bottom: true, right: true, top: true, left: true}"><quill-editor class="textContent" theme="bubble" placeholder="Company Name"></quill-editor></div>
+              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Company Name"></quill-editor></div>
             </div>
             <div id="cardHolderNameWrapper">
                 <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textarea" placeholder="Put card holder name here"/></div> -->
@@ -35,11 +35,14 @@
               <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor theme="bubble" placeholder="Company E-mail Address"></quill-editor></div> -->
             </div>
             <div id="contactDetailsWrapper">
-              <!-- <div id="contactNumber">(02) 356-1234</div>
-              <div id="emailAddress"><a href="https://www.google.com">email@email.com</a></div> -->
+              <!-- <div id="contactNumber">(02) 356-1234</div> -->
+              <!-- <div id="emailAddress"><a href="https://www.google.com">email@email.com</a></div> -->
               <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor theme="bubble" placeholder="Contact Number"></quill-editor></div> -->
               <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Company E-mail"></quill-editor></div>
             </div>
+            <!-- <div id="contactDetailsWrapper">
+              <div id="emailAddress"><a href="http://localhost:4200/profile">localhost:4200/profile</a></div>
+            </div> -->
           </div>
           <div class="backgroundButton background-btn-wrapper">
               <button class="backgroundBtn2" [ngClass]="{'hideButton': hasUploadedBackgroundImage}">Choose a Background Image</button>

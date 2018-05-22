@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
+import { Options } from 'selenium-webdriver/edge';
 
 @Component({
   selector: 'app-business-card',
@@ -27,29 +28,29 @@ export class BusinessCardComponent implements OnInit {
   ngOnInit() {}
 
   onSelectFile(event) { // called each time file input changes
-    if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
+    // if (event.target.files && event.target.files[0]) {
+    //   var reader = new FileReader();
 
-      reader.readAsDataURL(event.target.files[0]); // read file as data url
+    //   reader.readAsDataURL(event.target.files[0]); // read file as data url
 
-      reader.onload = (event) => { // called once readAsDataURL is completed
-        this.url = event.target.result;
-        this.hasUploadedImage = true;
-      }
-    }
+    //   reader.onload = (event) => { // called once readAsDataURL is completed
+    //     this.url = event.target.result;
+    //     this.hasUploadedImage = true;
+    //   }
+    // }
   }
 
   onSelectBackground(event) {
-    if (event.target.files && event.target.files[0]) {
-      var reader = new FileReader();
+    // if (event.target.files && event.target.files[0]) {
+    //   var reader = new FileReader();
 
-      reader.readAsDataURL(event.target.files[0]); // read file as data url
+    //   reader.readAsDataURL(event.target.files[0]); // read file as data url
 
-      reader.onload = (event) => { // called once readAsDataURL is completed
-        this.backgroundUrl = event.target.result;
-        this.hasUploadedBackgroundImage = true;
-      }
-    }
+    //   reader.onload = (event) => { // called once readAsDataURL is completed
+    //     this.backgroundUrl = event.target.result;
+    //     this.hasUploadedBackgroundImage = true;
+    //   }
+    // }
   }
 
   public downloadImage(event) {
@@ -137,9 +138,66 @@ export class BusinessCardComponent implements OnInit {
       let height = doc.internal.pageSize.height;
       doc.addImage(imgData, 'PNG', 25, 25);
       doc.save('sample-file.pdf');
+
+      // let options = {
+      //   pagesplit: true
+      // }
+      // let doc = new jsPDF();
+      // doc.addHTML(this.content.nativeElement,0,0,options, () => {
+      // doc.save("test.pdf");
+      // });
+    // let options = {
+    //   pagesplit: true
+    // }
+    // let doc = new jsPDF();
+    // doc.addHTML(this.content.nativeElement,0,0,options, () => {
+    //   doc.save("test.pdf");
     });
+  }
 
+  public downloadAsPdf2() {
+    // let doc = new jsPDF();
 
+    // let specialElementHandlers = {
+    //   '#editor': function(element, renderer) {
+    //     return true;
+    //   }
+    // }
+
+    // let content = this.content.nativeElement;
+
+    // console.log(content.innerHTML);
+
+    // doc.fromHTML(content.innerHTML, 15, 15, {
+    //   'width': 500,
+    //   'height': 700,
+    //   'elementHandlers': specialElementHandlers
+    // }); 
+
+    // doc.save('test.pdf');
+
+    html2canvas(document.querySelector("#capture")).then(canvas => {
+      let imgData = canvas.toDataURL('pdf');              
+      let doc = new jsPDF('l', 'mm');
+      let width = doc.internal.pageSize.width;    
+      let height = doc.internal.pageSize.height;
+      doc.addImage(imgData, 'PNG', 25, 25);
+      doc.save('sample-file.pdf');
+
+      // let options = {
+      //   pagesplit: true
+      // }
+      // let doc = new jsPDF();
+      // doc.addHTML(this.content.nativeElement,0,0,options, () => {
+      // doc.save("test.pdf");
+      // });
+    // let options = {
+    //   pagesplit: true
+    // }
+    // let doc = new jsPDF();
+    // doc.addHTML(this.content.nativeElement,0,0,options, () => {
+    //   doc.save("test.pdf");
+    });
   }
 
 }
