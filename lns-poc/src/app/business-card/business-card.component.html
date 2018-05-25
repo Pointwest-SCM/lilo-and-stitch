@@ -40,9 +40,11 @@
               <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor theme="bubble" placeholder="Contact Number"></quill-editor></div> -->
               <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Company E-mail"></quill-editor></div>
             </div>
-            <!-- <div id="contactDetailsWrapper">
-              <div id="emailAddress"><a href="http://localhost:4200/profile">localhost:4200/profile</a></div>
-            </div> -->
+            <div id="contactDetailsWrapper">
+              <div id="emailAddress"><a href="mailto:arvin.linog@pointwest.com.ph" data-rel="external">localhost:4200/profile</a>
+                <a href="tel:1231231234" data-rel="external">123-123-1234</a></div>
+              
+            </div>
           </div>
           <div class="backgroundButton background-btn-wrapper">
               <button class="backgroundBtn2" [ngClass]="{'hideButton': hasUploadedBackgroundImage}">Choose a Background Image</button>
@@ -60,7 +62,8 @@
         <!-- <a href="#" (click)="downloadAsImage($event)">
           <button type="submit">Download as IMG</button>DOWNLOAD AS IMAGE
         </a> -->
-        <button class="downloadButton" type="button" (click)="downloadAsPdf()"><span class="downloadButtonText">Download as PDF</span></button>
+        <!-- <span class="downloadButtonText"><a href="mailto:aj.linog12@gmail.com?subject=This%is%sparta&body=Please%see%attached"><button class="downloadButton" type="button" (click)="downloadAsPdf()">Download as PDF</button></a></span> -->
+        <button class="downloadButton" type="button" (click)="downloadAsPdf()">Download as PDF</button>
         <button class="downloadButton" type="button" (click)="downloadAsImage()"><span class="downloadButtonText">Download as PNG</span></button>
       </div>
     </mat-card-actions>

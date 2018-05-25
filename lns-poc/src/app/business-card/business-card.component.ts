@@ -8,6 +8,7 @@ import { Options } from 'selenium-webdriver/edge';
   templateUrl: './business-card.component.html',
   styleUrls: ['./business-card.component.scss']
 })
+
 export class BusinessCardComponent implements OnInit {
 
   context: CanvasRenderingContext2D;
@@ -28,29 +29,31 @@ export class BusinessCardComponent implements OnInit {
   ngOnInit() {}
 
   onSelectFile(event) { // called each time file input changes
-    // if (event.target.files && event.target.files[0]) {
-    //   var reader = new FileReader();
+    if (event.target.files && event.target.files[0]) {
+      let reader = new FileReader();
 
-    //   reader.readAsDataURL(event.target.files[0]); // read file as data url
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
 
-    //   reader.onload = (event) => { // called once readAsDataURL is completed
-    //     this.url = event.target.result;
-    //     this.hasUploadedImage = true;
-    //   }
-    // }
+      reader.onload = (event: any) => { // called once readAsDataURL is completed
+        this.url = event.currentTarget.result;
+        this.hasUploadedImage = true;
+      }
+    }
+    // console.log("THIS: ", event.currentTarget.result);
+    // console.log("THIS ALSO: ", event.target);
   }
 
   onSelectBackground(event) {
-    // if (event.target.files && event.target.files[0]) {
-    //   var reader = new FileReader();
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
 
-    //   reader.readAsDataURL(event.target.files[0]); // read file as data url
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
 
-    //   reader.onload = (event) => { // called once readAsDataURL is completed
-    //     this.backgroundUrl = event.target.result;
-    //     this.hasUploadedBackgroundImage = true;
-    //   }
-    // }
+      reader.onload = (event: any) => { // called once readAsDataURL is completed
+        this.backgroundUrl = event.target.result;
+        this.hasUploadedBackgroundImage = true;
+      }
+    }
   }
 
   public downloadImage(event) {
@@ -136,7 +139,8 @@ export class BusinessCardComponent implements OnInit {
       let doc = new jsPDF('l', 'mm');
       let width = doc.internal.pageSize.width;    
       let height = doc.internal.pageSize.height;
-      doc.addImage(imgData, 'PNG', 25, 25);
+      doc.addImage(imgData, 'PNG', 53, 30);
+      doc.textWithLink('Click here to view Konex user profile', 100, 170, { url: 'http://localhost:4200/profile' });
       doc.save('sample-file.pdf');
 
       // let options = {
@@ -153,6 +157,7 @@ export class BusinessCardComponent implements OnInit {
     // doc.addHTML(this.content.nativeElement,0,0,options, () => {
     //   doc.save("test.pdf");
     });
+    
   }
 
   public downloadAsPdf2() {
@@ -181,7 +186,8 @@ export class BusinessCardComponent implements OnInit {
       let doc = new jsPDF('l', 'mm');
       let width = doc.internal.pageSize.width;    
       let height = doc.internal.pageSize.height;
-      doc.addImage(imgData, 'PNG', 25, 25);
+      // doc.addImage(imgData, 'PNG', 25, 25);
+      doc.textWithLink('Click here', 25, 25, { url: 'http://www.google.com' });
       doc.save('sample-file.pdf');
 
       // let options = {
