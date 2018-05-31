@@ -21,6 +21,7 @@ import { AngularDraggableModule } from 'angular2-draggable';
 import { ResizableModule } from 'angular-resizable-element';
 
 import { QuillModule } from 'ngx-quill';
+import { TemplateComponent } from './shared/template/template.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { QuillModule } from 'ngx-quill';
     BrandProfileComponent,
     BusinessCardComponent,
     HeaderComponent,
-    CoverPhotoComponent
+    CoverPhotoComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +38,13 @@ import { QuillModule } from 'ngx-quill';
     AppRoutingModule,
     MatCardModule,
     MatMenuModule,
+    MatDialogModule,
     AngularDraggableModule,
     ResizableModule,
     QuillModule
+  ],
+  entryComponents: [
+    TemplateComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

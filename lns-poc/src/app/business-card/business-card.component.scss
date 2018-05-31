@@ -8,188 +8,384 @@ input:hover {
 }
 
 .businessCardPageContainer {
+    display: flex;
     position: relative;
-    width: 1000px;
+    width: 1170px;
     margin: auto;
-    padding: 60px 20px 20px 20px;
+    padding: 40px 0px 20px 0px;
     min-height: 36.9em;
 }
 
-.businessCardWrapper {
-    display: flex;
-    justify-content: center;
+.templateContainer {
+    flex: 1;
+}
+.businessCardEditContainer {
+    flex: 10;
 }
 
-.logoWrapper {
-    // padding: 1em;
-    // height: 12em;
-    // width: 12em;
-    // border: 0px;
-    // box-sizing: border-box;
-    // border-radius: 20em;
-    // z-index: 1;
-
-    // img {
-    //     overflow: hidden;
-    //     max-height: 4em;
-    //     max-width: 4em;
-    // }
-
-    // padding: 0em 1em 1em 1em;
-    // height: 12em;
-    // width: 12em;
-    // box-sizing: border-box;
-    // text-align: center;
-    // position: absolute;
-    // top: 10.5em;
-    // left: 5em;
-    // z-index: 1;
-
-    // border-radius: 50%;
-    // overflow: hidden;
-    // background: white;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // border: 1px solid #D3D3D3;
-
-    padding: 0em 1em 1em 1em;
-    width: 12em;
-    box-sizing: border-box;
-    text-align: center;
-    position: absolute;
-    top: 10.5em;
-    left: 5em;
-    z-index: 1;
-
-    #logoSubWrapper {
-        border-radius: 50%;
-        overflow: hidden;
-        background: white;
-        width: 13em;
-        height: 13em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #D3D3D3;
-    }
-
-    img {
-        max-height: 13em;
-        max-width: 13em;
-    }
-}
-
-.logoWrapper:hover {
-    padding: 0em 1em 1em 1em;
-    height: 12em;
-    width: 12em;
-    border: 2px;
-    // border-style: dashed;
-    box-sizing: border-box;
-
-    #logoSubWrapper:hover {
-        border-radius: 50%;
-        overflow: hidden;
-        background: white;
-        width: 13em;
-        height: 13em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px dashed #1F487E;
-    }
-}
-
-.businessCardContainer {
-    max-width: 50em;
+.businessCardContainer1 {
+    max-width: 55em;
     min-height: 30em;
     justify-content: center;
     margin: auto;
     padding-top: 2em;
     border: 4px solid #112644;
+
+    .businessCardWrapper {
+        display: flex;
+        // justify-content: center;
+    }
+
+    .logoWrapper {
+        padding: 0em 1em 1em 1em;
+        width: 12em;
+        box-sizing: border-box;
+        text-align: center;
+        position: absolute;
+        top: 10.5em;
+        left: 5em;
+        z-index: 1;
+    
+        #logoSubWrapper {
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            width: 13em;
+            height: 13em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #D3D3D3;
+        }
+    
+        img {
+            max-height: 13em;
+            max-width: 13em;
+        }
+    }
+    
+    .logoWrapper:hover {
+        padding: 0em 1em 1em 1em;
+        height: 12em;
+        width: 12em;
+        border: 2px;
+        // border-style: dashed;
+        box-sizing: border-box;
+    
+        #logoSubWrapper:hover {
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            width: 13em;
+            height: 13em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed #1F487E;
+        }
+    }
+
+    .textContent {
+        padding-bottom: 10px;
+        border: 0px;
+        // min-width: 6em;
+    }
+    
+    .textContent:hover {
+        border: 1.5px dashed #112644;
+    }
+    
+    .detailsWrapper {
+        position: absolute;
+        left: 30em;
+        top: 7em;
+
+        #cardHolderNameWrapper {
+            quill-editor {
+                min-width: 20em;
+            }
+        }
+    }
+    
+    .dragBoundary {
+        height: 30em;
+        width: 100%;
+    }
+    
+    .upload-btn-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+    
+    .btn {
+        border: 2px solid #1F487E;
+        color: white;
+        background-color: #1F487E;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .upload-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    
+    .backgroundBtn2 {
+        border: 2px solid #1F487E;
+        color: white;
+        background-color: #1F487E;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+    
+    .background-btn-wrapper {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        overflow: hidden;
+        display: inline-block;
+    }
+    
+    .background-btn-wrapper input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    
+    .hideButton {
+        display: none;
+    }
+    
+    quill-editor {
+        display: block;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    #companyName {
+        color: #1F487E;
+    }
+    
+    i {
+        float: left;
+        padding: 10px;
+    }
 }
 
-.textContent {
-    padding-bottom: 10px;
-    border: 0px;
-    min-width: 6em;
-}
+.businessCardContainer2 {
+    max-width: 55em;
+    min-height: 30em;
+    justify-content: center;
+    margin: auto;
+    padding-top: 2em;
+    border: 4px solid #112644;
 
-.textContent:hover {
-    border: 1.5px dashed #112644;
-}
+    .businessCardWrapper {
 
-.detailsWrapper {
-    position: absolute;
-    left: 27em;
-    top: 7em;
-}
+        .logoWrapper {
+            padding: 0em 1em 1em 1em;
+            width: 12em;
+            box-sizing: border-box;
+            text-align: center;
+            position: absolute;
+            top: 8.5em;
+            left: 5em;
+            z-index: 1;
+        
+            #logoSubWrapper {
+                border-radius: 50%;
+                overflow: hidden;
+                background: white;
+                width: 13em;
+                height: 13em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #D3D3D3;
+            }
+        
+            img {
+                max-height: 13em;
+                max-width: 13em;
+            }
+        }
+        
+        .logoWrapper:hover {
+            padding: 0em 1em 1em 1em;
+            height: 12em;
+            width: 12em;
+            border: 2px;
+            // border-style: dashed;
+            box-sizing: border-box;
+        
+            #logoSubWrapper:hover {
+                border-radius: 50%;
+                overflow: hidden;
+                background: white;
+                width: 13em;
+                height: 13em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px dashed #1F487E;
+            }
+        }
+    
+        .textContent {
+            padding-bottom: 10px;
+            border: 0px;
+            // min-width: 6em;
+        }
+        
+        .textContent:hover {
+            border: 1.5px dashed #112644;
+        }
+        
+        .detailsWrapper {
+            position: absolute;
 
-.dragBoundary {
-    height: 30em;
-    width: 100%;
+            #companyNameWrapper {
+                position: absolute;
+                left: 19em;
+                top: 13.5em;
+
+                white-space: nowrap;
+            }
+
+            #cardHolderNameWrapper {
+                position: absolute;
+                left: 1em;
+                top: 21em;
+
+                quill-editor {
+                    min-width: 20em;
+                }
+            }
+
+            #jobTitleWrapper {
+                position: absolute;
+                left: 1em;
+                top: 26em;
+
+                quill-editor {
+                    min-width: 20em;
+                }
+            }
+
+            #phoneWrapper {
+                position: absolute;
+                left: 31em;
+                top: 21em;
+
+                quill-editor {
+                    min-width: 20em;
+                }
+            }
+
+            #emailWrapper {
+                position: absolute;
+                left: 31em;
+                top: 26em;
+
+                quill-editor {
+                    min-width: 20em;
+                }
+            }
+        }
+        
+        .dragBoundary {
+            height: 30em;
+            width: 100%;
+        }
+            
+        .upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .btn {
+            border: 2px solid #1F487E;
+            color: white;
+            background-color: #1F487E;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        
+        .backgroundBtn2 {
+            border: 2px solid #1F487E;
+            color: white;
+            background-color: #1F487E;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 10px;
+        }
+        
+        .background-btn-wrapper {
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .background-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        
+        .hideButton {
+            display: none;
+        }
+        
+        quill-editor {
+            display: block;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        #companyName {
+            color: #1F487E;
+        }
+        
+        i {
+            float: left;
+            padding: 10px;
+        }
+    }
 }
 
 .downloadButtonContainer {
     display: flex;
     justify-content: center;
-}
-
-.upload-btn-wrapper {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.btn {
-    border: 2px solid #1F487E;
-    color: white;
-    background-color: #1F487E;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.upload-btn-wrapper input[type=file] {
-    font-size: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-}
-
-.backgroundBtn2 {
-    border: 2px solid #1F487E;
-    color: white;
-    background-color: #1F487E;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-size: 10px;
-}
-
-.background-btn-wrapper {
-    position: absolute;
-    right: 1em;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.background-btn-wrapper input[type=file] {
-    font-size: 100px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-}
-
-.hideButton {
-    display: none;
-}
-
-quill-editor {
-    display: block;
 }
 
 .downloadButton {
@@ -203,9 +399,4 @@ quill-editor {
     text-align: center;
     color: #FFFFFF;
     font-size: 15px;
-}
-
-a {
-    color: white;
-    text-decoration: none;
 }

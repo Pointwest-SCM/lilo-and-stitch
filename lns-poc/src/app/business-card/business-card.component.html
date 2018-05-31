@@ -1,52 +1,106 @@
-<div>
-  <mat-card class="businessCardPageContainer">
+<div class="businessCardPageContainer" >
+  <mat-card class="templateContainer">
+    <h2>Choose Template</h2>
+    <business-card-template (selectedTemplate)="selectTemplate($event)"></business-card-template>
+  </mat-card>
+  <mat-card class="businessCardEditContainer">
     <mat-card-content>
-      <div #content id="content">
-      <mat-card id="capture" class="businessCardContainer" [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '50% 475px'}">
+      <div #content id="content" [ngClass]="{ 'top-b': !edge?.top, 'bottom-b': !edge?.bottom, 'left-b': !edge?.left, 'right-b': !edge?.right }" #myBounds>
+      <mat-card *ngIf="selectedTemplate == 1" id="capture" class="businessCardContainer1" [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '50% 475px'}">
 
-        <div class="dragBoundary businessCardWrapper" [ngClass]="{ 'top-b': !edge?.top, 'bottom-b': !edge?.bottom, 'left-b': !edge?.left, 'right-b': !edge?.right }" #myBounds>
-            <!-- <canvas #myCanvas id="canvas" width="700" height="300"></canvas> -->
+        <div class="dragBoundary businessCardWrapper">
           <div class="logoWrapper" ngDraggable [bounds]="myBounds" [inBounds]="true" mwlResizable [enableGhostResize]="true" [resizeSnapGrid]="{left: 50, right: 50}" [resizeEdges]="{bottom: true, right: true, top: true, left: true}">
             <div class="upload-btn-wrapper" id="logoSubWrapper">
                 <!-- <button class="btn">Upload a file</button>
                 <input type="file" name="myfile" /> -->
                 <img [src]="url"  [ngClass]="{'hideButton': !hasUploadedImage}"> <br/>
                 <button class="btn" [ngClass]="{'hideButton': hasUploadedImage}">Upload a file</button>
-                <input type='file' (change)="onSelectFile($event)"/>
+                <input type='file' (change)="onSelectPicture($event)"/>
             </div>
           </div>
           <div class="detailsWrapper">
             <div id="companyNameWrapper">
               <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textarea" placeholder="Put company name here"/></div> -->
-              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Company Name"></quill-editor></div>
+              <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Company Name"></quill-editor></div> -->
+              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><span id="companyName"><h2>Pointwest Innovations Corporation</h2></span></div>
             </div>
             <div id="cardHolderNameWrapper">
                 <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textarea" placeholder="Put card holder name here"/></div> -->
-                <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor  class="textContent" theme="bubble" placeholder="Card Holder"></quill-editor></div>
+                <div ngDraggable [bounds]="myBounds" [inBounds]="true"><i class="material-icons">account_circle</i><quill-editor  class="textContent" theme="bubble" placeholder="Card Holder"></quill-editor></div>
             </div>
             <div id="jobTitleWrapper">
                 <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textarea" placeholder="Put job title here"/></div> -->
-                <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Job Title"></quill-editor></div>
+                <div ngDraggable [bounds]="myBounds" [inBounds]="true"><i class="material-icons">event_seat</i><quill-editor class="textContent" theme="bubble" placeholder="Position"></quill-editor></div>
             </div>
-            <div id="contactDetailsWrapper">
+            <div id="phoneWrapper">
               <!-- <div id="contactNumber">(02) 356-1234</div>
               <div id="emailAddress"><a href="https://www.google.com">email@email.com</a></div> -->
-              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Contact Number"></quill-editor></div>
+              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><i class="material-icons">perm_phone_msg</i><quill-editor class="textContent" theme="bubble" placeholder="Contact Number"></quill-editor></div>
               <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor theme="bubble" placeholder="Company E-mail Address"></quill-editor></div> -->
             </div>
-            <div id="contactDetailsWrapper">
+            <div id="emailWrapper">
               <!-- <div id="contactNumber">(02) 356-1234</div> -->
               <!-- <div id="emailAddress"><a href="https://www.google.com">email@email.com</a></div> -->
               <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor theme="bubble" placeholder="Contact Number"></quill-editor></div> -->
-              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Company E-mail"></quill-editor></div>
-            </div>
-            <div id="contactDetailsWrapper">
-              <div id="emailAddress"><a href="mailto:arvin.linog@pointwest.com.ph" data-rel="external">localhost:4200/profile</a>
-                <a href="tel:1231231234" data-rel="external">123-123-1234</a></div>
-              
+              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><i class="material-icons">language</i><quill-editor class="textContent" theme="bubble" placeholder="Company E-mail"></quill-editor></div>
             </div>
           </div>
           <div class="backgroundButton background-btn-wrapper">
+              <!-- <div id="contactDetailsWrapper">
+                  <div id="emailAddress"><a href="mailto:arvin.linog@pointwest.com.ph" data-rel="external">localhost:4200/profile</a>
+                    <a href="tel:1231231234" data-rel="external">123-123-1234</a></div>
+                </div> -->
+              <button class="backgroundBtn2" [ngClass]="{'hideButton': hasUploadedBackgroundImage}">Choose a Background Image</button>
+              <input type='file' (change)="onSelectBackground($event)"/>
+          </div>
+        </div>
+      </mat-card>
+
+      <mat-card *ngIf="selectedTemplate == 2" id="capture" class="businessCardContainer2" [ngStyle]="{'background-image': 'url(' + backgroundUrl + ')', 'background-repeat': 'no-repeat', 'background-size': '960px 45%'}">
+
+        <div class="dragBoundary businessCardWrapper">
+          <div class="logoWrapper" ngDraggable [bounds]="myBounds" [inBounds]="true" mwlResizable [enableGhostResize]="true" [resizeSnapGrid]="{left: 50, right: 50}" [resizeEdges]="{bottom: true, right: true, top: true, left: true}">
+            <div class="upload-btn-wrapper" id="logoSubWrapper">
+                <!-- <button class="btn">Upload a file</button>
+                <input type="file" name="myfile" /> -->
+                <img [src]="url"  [ngClass]="{'hideButton': !hasUploadedImage}"> <br/>
+                <button class="btn" [ngClass]="{'hideButton': hasUploadedImage}">Upload a file</button>
+                <input type='file' (change)="onSelectPicture($event)"/>
+            </div>
+          </div>
+          <div class="detailsWrapper">
+            <div id="companyNameWrapper">
+              <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textarea" placeholder="Put company name here"/></div> -->
+              <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor class="textContent" theme="bubble" placeholder="Company Name"></quill-editor></div> -->
+              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><span id="companyName"><h2>Pointwest Innovations Corporation</h2></span></div>
+            </div>
+            <div id="cardHolderNameWrapper">
+                <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textarea" placeholder="Put card holder name here"/></div> -->
+                <div ngDraggable [bounds]="myBounds" [inBounds]="true"><i class="material-icons">account_circle</i><quill-editor  class="textContent" theme="bubble" placeholder="Card Holder"></quill-editor></div>
+            </div>
+            <div id="jobTitleWrapper">
+                <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><input type="textarea" placeholder="Put job title here"/></div> -->
+                <div ngDraggable [bounds]="myBounds" [inBounds]="true"><i class="material-icons">event_seat</i><quill-editor class="textContent" theme="bubble" placeholder="Job Title"></quill-editor></div>
+            </div>
+            <div id="phoneWrapper">
+              <!-- <div id="contactNumber">(02) 356-1234</div>
+              <div id="emailAddress"><a href="https://www.google.com">email@email.com</a></div> -->
+              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><i class="material-icons">perm_phone_msg</i><quill-editor class="textContent" theme="bubble" placeholder="Contact Number"></quill-editor></div>
+              <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor theme="bubble" placeholder="Company E-mail Address"></quill-editor></div> -->
+            </div>
+            <div id="emailWrapper">
+              <!-- <div id="contactNumber">(02) 356-1234</div> -->
+              <!-- <div id="emailAddress"><a href="https://www.google.com">email@email.com</a></div> -->
+              <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="true"><quill-editor theme="bubble" placeholder="Contact Number"></quill-editor></div> -->
+              <div ngDraggable [bounds]="myBounds" [inBounds]="true"><i class="material-icons">language</i><quill-editor class="textContent" theme="bubble" placeholder="Company E-mail"></quill-editor></div>
+            </div>
+
+          </div>
+          <div class="backgroundButton background-btn-wrapper">
+              <!-- <div id="contactDetailsWrapper">
+                  <div id="emailAddress"><a href="mailto:arvin.linog@pointwest.com.ph" data-rel="external">localhost:4200/profile</a>
+                    <a href="tel:1231231234" data-rel="external">123-123-1234</a></div>
+                </div> -->
               <button class="backgroundBtn2" [ngClass]="{'hideButton': hasUploadedBackgroundImage}">Choose a Background Image</button>
               <input type='file' (change)="onSelectBackground($event)"/>
           </div>
@@ -62,7 +116,7 @@
         <!-- <a href="#" (click)="downloadAsImage($event)">
           <button type="submit">Download as IMG</button>DOWNLOAD AS IMAGE
         </a> -->
-        <!-- <span class="downloadButtonText"><a href="mailto:aj.linog12@gmail.com?subject=This%is%sparta&body=Please%see%attached"><button class="downloadButton" type="button" (click)="downloadAsPdf()">Download as PDF</button></a></span> -->
+        <span class="downloadButton downloadButtonText"><a href="mailto:aj.linog12@gmail.com?subject=Konex Business Card&body=Please attach your downloaded Business Card file here."><button class="downloadButton" type="button">Open Email</button></a></span>
         <button class="downloadButton" type="button" (click)="downloadAsPdf()">Download as PDF</button>
         <button class="downloadButton" type="button" (click)="downloadAsImage()"><span class="downloadButtonText">Download as PNG</span></button>
       </div>
